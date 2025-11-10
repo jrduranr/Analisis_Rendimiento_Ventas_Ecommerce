@@ -36,6 +36,7 @@ SELECT
     Country,
     Description,
     VentaTotal,
+	Quantity,
     -- WINDOW FUNCTION: Calcula la venta acumulada por país ordenada por fecha
     SUM(VentaTotal) OVER (PARTITION BY Country ORDER BY InvoiceDate) AS VentaAcumuladaPais
 FROM
